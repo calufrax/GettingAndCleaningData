@@ -68,3 +68,4 @@ summaryLabels <- cbind("Activity"=as.character(activityLabels[cleanData[,2],2]))
 finalData<-as.data.frame(cleanData)
 finalData<-as.data.frame(cbind(finalData[,1:2],summaryLabels,finalData[3:(dim(finalData)[2])]))
 
+write.table(finalData,"CleanData.txt",row.name=FALSE)
