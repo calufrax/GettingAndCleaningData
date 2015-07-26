@@ -1,0 +1,41 @@
+
+activityLabels		labels for the activity
+featuresList 		features list
+subject_train		who is the subject
+x_train			the training set
+y_train			which activity
+
+subject_test		who is the subject
+x_test			the test set
+y_test			which activity
+
+singleSubject 		joining the subject lists from training and test sets
+singleX			joining the data sets from training and test sets
+singleY			joining the activity list from the training and test sets
+activityText		converting the activity list singleY from numbers to text description
+
+singleData 		combining singleSubject singleY activityText into first columns
+bigDataSheet		complete list of subject number, activity, and data set
+
+whichToExtract 		indexes the data for the searched terms “mean”, “Mean”, and “std”
+featuresToExtract	extract the necessary columns
+smallDataSheet		compressed data sheet, using the searched terms.
+
+rangeActivities 	gives a maximum for number of activities (6 in given data set)
+rangeSubjects		gives a maximum for number of subjects (30 in given set)
+
+cleanData		initialised as NULL, used to build a cleaned data set (taking means)
+
+subjectLoop, activityLoop  Dummy looping variables for extracting features by test subject
+					and activity
+dummySet 		extract only required subject and activity subset
+dummyLabel		used to try to get labels for this activity – not used in this version
+dummyNumber		used to try to get number of columns – not used in this version
+meanOfDummy		take column means for this activity and subject
+dummyRow		temporary row to be appended to cleanData
+
+summaryLabels		kludge to get activity labels to be displayed correctly
+finalData		final, clean data set, ready for writing to console
+
+CleanData.txt		output text file
+
